@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TafelMax proizvodi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Katalog TafelMax proizvoda: X, U, Trapez, Okvir i Matrix nogare, stolovi i nameštaj po meri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="TafelMax, početna">
+      <svg viewBox="0 0 120 96" aria-hidden="true"><rect x="0" y="0" width="120" height="14" fill="#A87F56"/><path d="M14 24 L96 96 M106 24 L24 96" stroke="currentColor" stroke-width="15" stroke-linecap="butt" fill="none"/></svg>
+      <span class="wordmark">TAFEL<b>MAX</b></span>
+    </a>
+    <nav class="nav" aria-label="Glavni meni">
+      <a href="proizvodi.html" aria-current="page">Proizvodi</a>
+      <a href="index.html#galerija">Galerija</a>
+      <a href="index.html#narucivanje">Naručivanje</a>
+      <a href="index.html#saveti">Saveti</a>
+      <a class="cta-mini" href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="wrap">
+      <p class="crumbs"><a href="index.html">Početna</a> / Proizvodi</p>
+      <h1>Proizvodi</h1>
+      <p>Modeli koje redovno pravimo, sa merama iz naše proizvodnje. Kliknite na proizvod da izaberete dimenzije, izvedbu i boju. Sve radimo i po vašoj meri.</p>
+    </div>
+  </section>
+  <div class="filterbar">
+    <div class="wrap">
+      <div class="chips" id="chips" role="group" aria-label="Kategorije proizvoda"></div>
+    </div>
+  </div>
+  <div class="wrap catalog" id="catalog"></div>
+
+
+  <section class="block contact" id="kontakt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2>Pošaljite meru</h2>
+        </div>
+        <p>Javite se porukom, telefonom ili imejlom. Odgovaramo u toku radnog vremena, najčešće u roku od sat vremena.</p>
+      </div>
+      <div class="cgrid">
+        <div class="citem"><small>Telefon</small><span class="v num">063 555 195</span><button class="copy" type="button" data-copy="063555195">Kopiraj</button></div>
+        <div class="citem"><small>Fiksni</small><span class="v num">015 312 053</span><button class="copy" type="button" data-copy="015312053">Kopiraj</button></div>
+        <div class="citem"><small>Imejl</small><span class="v">info@tafelmax.com</span><button class="copy" type="button" data-copy="info@tafelmax.com">Kopiraj</button></div>
+        <div class="citem"><small>Instagram</small><a class="v" href="https://www.instagram.com/tafel.max/" target="_blank" rel="noopener">@tafel.max</a></div>
+        <div class="citem"><small>Radionica</small><span class="v">Prote Smiljanića 62<br>15000 Šabac</span></div>
+      </div>
+      <form class="msg-box" id="msgForm">
+        <label for="msg">Vaša poruka (popunite i kopirajte u Instagram, Viber ili imejl)</label>
+        <textarea id="msg">Dobar dan, zanima me:
+Šta: nogare / ceo sto
+Dimenzije ploče: ___ × ___ cm, visina ___ cm
+Oblik nogara: X / U / Trapez / Matrix
+Boja: crna / bela / providna
+Mesto isporuke: </textarea>
+        <div class="msg-row">
+          <button class="btn btn-cta" type="submit">Kopiraj poruku</button>
+          <span class="hint">Poruku pošaljite na @tafel.max ili na broj iznad.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© TafelMax · Čelik po meri</span>
+    <span>Metalne nogare i nameštaj po meri · Šabac i okolina</span>
+  </div>
+</footer>
+
+<dialog id="pd" aria-labelledby="pdTitle">
+  <button class="close" type="button" data-close aria-label="Zatvori">×</button>
+  <div class="dlg">
+    <div class="dlg-draw" id="pdDraw"></div>
+    <div class="dlg-info">
+      <div>
+        <p class="eyebrow" id="pdCat"></p>
+        <h3 id="pdTitle" style="margin-top:10px"></h3>
+      </div>
+      <p class="desc" id="pdDesc"></p>
+      <div><p class="opt-label">Dimenzije</p><div class="opts" id="pdSizes"></div></div>
+      <div id="pdVarWrap"><p class="opt-label">Izvedba</p><div class="opts" id="pdVars"></div></div>
+      <div><p class="opt-label">Boja</p><div class="opts" id="pdColors"></div></div>
+      <table class="spec"><tbody id="pdSpec"></tbody></table>
+      <a class="btn btn-cta" href="#kontakt" id="pdAsk" style="justify-self:start">Pošaljite upit za ovaj model</a>
+    </div>
+  </div>
+</dialog>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
